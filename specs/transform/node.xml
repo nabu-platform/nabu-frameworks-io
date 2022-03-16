@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.iface.ServiceInterfaceManager" created="2022-03-15T12:22:13.444+01:00" lastModified="2022-03-16T14:38:57.252+01:00" leaf="true" version="9">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>java.lang.Object</references>
+    <references>nabu.frameworks.io.specs.transformInput</references>
+    <references>nabu.frameworks.io.specs.transferResult</references>
+</node>

@@ -1,0 +1,43 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="76a3d9b1-2916-446e-914f-826dbaa0660b"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="b0efffa2-52d6-49e6-8547-8665df8c5274"
+			lineNumber="2">
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="6aae4b3c-231b-4dba-8036-c1a9497fd6b7"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="d1d2736b-57c1-4192-b92e-058fbd7da718"
+				serviceId="nabu.frameworks.io.specs.ioProvider"
+				resultName="resultb687fbe70cb5456b89be9474923415f5"
+				temporaryMapping="true"
+				x="149"
+				y="43"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="b96cf31a-f1cb-4992-8ca5-3361854472b6"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultb687fbe70cb5456b89be9474923415f5/responses</from>
+			<to>responses</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+			comment="Post process the responses (if necessary)"
+			disabled="false"
+			id="d8312a8f-7c63-4d30-91c9-85bdbdfdf701"
+			label="responses != null"
+			lineNumber="4">
+	</steps>
+</sequence>

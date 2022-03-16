@@ -1,0 +1,120 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="34b75a7d-fd06-47ef-a3c2-5d7a3cb3dd81"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="1980451fcecf4ff2846bc3168ea5370c"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="28f7b169c3ba4bb0906a25646dfa2ef5"
+				serviceId="nabu.utils.Object.toProperties"
+				resultName="result81eecbcab0174d5fb4f1ff4826b9fbd4"
+				temporaryMapping="true"
+				x="70"
+				y="38"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="0247f63d-d4c5-45aa-929e-36eb602c71cb"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/result</from>
+				<to>object</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="fec1b146-5e82-45f0-9555-a4d668cc3b28"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result81eecbcab0174d5fb4f1ff4826b9fbd4/properties</from>
+			<to>propertyList/properties</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="839f543d-be0f-4958-a296-34ff0ad5957b"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="e02f0911-4c39-4775-a66e-8290275a9b49"
+				serviceId="nabu.utils.List.size"
+				resultName="result264baae6639e43138e2cc47c81460409"
+				temporaryMapping="true"
+				x="97"
+				y="44"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="c70e8f41-1599-4ca4-a286-26d7a4078800"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>propertyList/properties</from>
+				<to>list</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="90ceed22-47db-40fb-9276-32021675c871"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result264baae6639e43138e2cc47c81460409/size</from>
+			<to>amount</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="b072b408611b42089e0decc921f6ac3f"
+			label="amount &gt; 0"
+			lineNumber="4">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="d0e8222625324ecf9c655636590f9a53"
+				serviceId="nabu.data.json.Services.marshal"
+				resultName="result7993af40b811412085f1f0182982cc63"
+				temporaryMapping="true"
+				x="65"
+				y="59"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="055cd846378a4aec993a239741c9df77"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>true</from>
+				<to>prettyPrint</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="489f9305-b4e9-4e59-a386-bc8a4b312559"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>propertyList</from>
+				<to>data</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="e5bcc3ea-e5b9-4268-960e-6094b4e551ea"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result7993af40b811412085f1f0182982cc63/marshalled</from>
+			<to>output/properties</to>
+		</steps>
+	</steps>
+</sequence>

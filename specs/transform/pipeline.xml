@@ -1,0 +1,9 @@
+<structure comment="Transforms transfer results into something else.&#10;" name="pipeline">
+    <structure name="input">
+        <structure definition="java.lang.Object" minOccurs="0" name="properties"/>
+        <structure definition="nabu.frameworks.io.specs.transformInput" maxOccurs="unbounded" minOccurs="0" name="original" restrict="id"/>
+    </structure>
+    <structure name="output">
+        <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="transformed"/>
+    </structure>
+</structure>

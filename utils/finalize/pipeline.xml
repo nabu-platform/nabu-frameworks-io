@@ -1,0 +1,14 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field foreignKey="nabu.frameworks.io.database.types.channelInstance:id" name="channelInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field name="finalizeServiceId" type="java.lang.String"/>
+        <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="records"/>
+        <field minOccurs="0" name="channelProperties" type="java.lang.String"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="java.lang.Object" minOccurs="0" name="properties"/>
+    <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    <structure definition="nabu.utils.types.ParameterDescription" minOccurs="0" name="resultParameter"/>
+    <structure definition="java.lang.Object" minOccurs="0" name="result"/>
+    <structure definition="nabu.frameworks.io.specs.propertyList" name="recordKeys"/>
+</structure>

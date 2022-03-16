@@ -1,0 +1,23 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field comment="The database connection to use" minOccurs="0" name="connectionId" type="java.lang.String"/>
+        <field name="channelId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field minOccurs="0" name="limit" type="java.lang.Long"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" name="channel"/>
+    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" name="channelProvider"/>
+    <structure definition="java.lang.Object" name="propertiesInput"/>
+    <field minOccurs="0" name="limited" type="java.lang.Boolean"/>
+    <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="transferResults"/>
+    <field name="looping" type="java.lang.Boolean"/>
+    <field name="offset" type="java.lang.Long"/>
+    <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="transferRecords"/>
+    <field minOccurs="0" name="serverName" type="java.lang.String"/>
+    <field name="batchId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="recordsToProcess"/>
+    <structure collectionName="channelInstances" definition="nabu.frameworks.io.database.types.channelInstance" name="channelInstance"/>
+    <field minOccurs="0" name="amountOfTransformers" type="java.lang.Integer"/>
+    <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" maxOccurs="unbounded" minOccurs="0" name="transformers"/>
+    <field minOccurs="0" name="channelProperties" type="java.lang.String"/>
+</structure>

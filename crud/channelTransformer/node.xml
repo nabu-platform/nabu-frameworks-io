@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.crud.CRUDArtifactManager" created="2022-03-16T08:10:58.969+01:00" lastModified="2022-03-16T10:24:00.107+01:00" leaf="false" version="3">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.io.database.types.channelTransformer</references>
+    <references>nabu.services.crud.provider.basic.provider</references>
+</node>

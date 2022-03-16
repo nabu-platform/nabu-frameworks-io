@@ -1,0 +1,90 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="b1947777-eb55-40e9-a3a4-5406cd285ce6"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Only retain the &quot;final&quot; transfers"
+			disabled="false"
+			id="32338d5a-6d8d-482c-af2c-e2d80cbc7f5b"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="526ee48a-404b-44c7-bdce-535e7305a054"
+				serviceId="nabu.frameworks.io.services.runProvider"
+				resultName="resulte347f7e630b24459ac2814cf0ab5458a"
+				temporaryMapping="true"
+				x="30"
+				y="30"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="065c3253-f4f6-4da6-b31b-090343448e63"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resulte347f7e630b24459ac2814cf0ab5458a/transfers[final = true]</from>
+			<to>transfers</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="If we have no batch size, we want all in one batch"
+			disabled="false"
+			id="85e4bd08-bda9-4baa-bd22-9ab2e9fe847b"
+			label="channel/batchSize == null"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="3c685650-afab-4c61-b6fa-cd6bd4d13540"
+				serviceId="nabu.utils.List.size"
+				resultName="resulte5e4aee7d461470fa68bbfc488566cb8"
+				temporaryMapping="true"
+				x="171"
+				y="198"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="d7b5ab57-73e1-41bc-9dfa-24edbb021451"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>transfers</from>
+				<to>list</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="bd0d0082-aec8-415c-89ae-e667d771658c"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resulte5e4aee7d461470fa68bbfc488566cb8/size</from>
+			<to>channel/batchSize</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+			comment="Check all the &quot;final&quot; transactions and process them according to batch requirements"
+			disabled="false"
+			id="206b8338e89e4dc19f4a3ae3c79b1c68"
+			label="transfers"
+			lineNumber="4">
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="81373b6b-e97d-48eb-a977-31fd9445109c"
+			lineNumber="5"
+			variable="batchedTransfers"
+			batchSize="=channel/batchSize">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="TODO: process"
+				disabled="false"
+				id="889d8705-a0a3-4adb-af44-d82a3a58b4cd"
+				lineNumber="6">
+		</steps>
+		<query>transfers</query>
+	</steps>
+</sequence>

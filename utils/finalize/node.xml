@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-03-16T14:46:59.386+01:00" lastModified="2022-03-16T17:06:53.002+01:00" leaf="true" version="25">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.io.utils.getServiceProperties</references>
+    <references>nabu.utils.types.ParameterDescription</references>
+    <references>nabu.frameworks.io.specs.propertyList</references>
+    <references>java.util.UUID</references>
+    <references>nabu.utils.reflection.Type.set</references>
+    <references>nabu.frameworks.io.specs.transferResult</references>
+    <references>nabu.utils.reflection.Type.describe</references>
+    <references>nabu.utils.reflection.Type.newInstance</references>
+    <references>nabu.frameworks.io.database.types.channelInstanceData</references>
+    <references>java.lang.Object</references>
+    <references>java.lang.String</references>
+    <references>nabu.data.json.Services.unmarshal</references>
+    <references>nabu.frameworks.io.specs.finalize</references>
+    <references>nabu.frameworks.io.database.types.channelInstance</references>
+</node>

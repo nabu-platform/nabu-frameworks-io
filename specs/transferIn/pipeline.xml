@@ -1,0 +1,12 @@
+<structure comment="The limit that is passed in should be respected when possible.&#10;The properties in the output are passed to the finalize service. If no properties are provided, the original are passed in.&#10;You could for instance pass in an FTP connection to the finalize." name="pipeline">
+    <structure name="input">
+        <structure definition="java.lang.Object" minOccurs="0" name="properties"/>
+        <field minOccurs="0" name="limit" type="java.lang.Long"/>
+        <field comment="Probably not relevant in most cases, but we know it and it might be useful" minOccurs="0" name="offset" type="java.lang.Long"/>
+    </structure>
+    <structure name="output">
+        <structure definition="java.lang.Object" minOccurs="0" name="finalizationProperties"/>
+        <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
+        <field comment="Set to true if the limit was respected" minOccurs="0" name="limited" type="java.lang.Boolean"/>
+    </structure>
+</structure>

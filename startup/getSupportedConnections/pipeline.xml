@@ -1,0 +1,9 @@
+<structure name="pipeline">
+    <structure name="input"/>
+    <structure name="output">
+        <field maxOccurs="unbounded" minOccurs="0" name="connections" type="java.lang.String"/>
+    </structure>
+    <structure definition="nabu.utils.types.NodeDescription" maxOccurs="unbounded" minOccurs="0" name="pools"/>
+    <field name="amountOfChanges" type="java.lang.Integer"/>
+    <structure definition="nabu.protocols.jdbc.pool.types.JDBCPoolInformation" minOccurs="0" name="information"/>
+</structure>

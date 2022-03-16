@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-03-16T15:20:25.696+01:00" lastModified="2022-03-16T15:22:31.483+01:00" leaf="true" version="12">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.utils.List.size</references>
+    <references>nabu.frameworks.io.specs.propertyList</references>
+    <references>java.lang.String</references>
+    <references>nabu.data.json.Services.marshal</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.frameworks.io.specs.transferResult</references>
+    <references>nabu.utils.Object.toProperties</references>
+</node>

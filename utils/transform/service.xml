@@ -1,0 +1,451 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="3cf5c597-9772-443d-a869-362a8ce9d8ff"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Get the transformers for the channel"
+			disabled="false"
+			id="45d94f0f-1489-4df8-b17c-8c5197896c42"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="885fbcc2-3158-4f3d-a7b6-2c149d635f4e"
+				serviceId="nabu.utils.Server.getServerName"
+				resultName="result128148eb5e714e02947bb904cfadd262"
+				temporaryMapping="true"
+				x="50"
+				y="133"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="8d0894be-9150-432b-b4e6-d82ba6887cc1"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result128148eb5e714e02947bb904cfadd262/server</from>
+			<to>serverName</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="446f4c11-9cc7-4a70-8ed4-98c213fb74f9"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/records</from>
+			<to>recordsToTransform</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="74b510cd-d3d3-4588-a147-fbfece706e42"
+				serviceId="nabu.utils.List.size"
+				resultName="result67b07fbf332742ebb00eff52323bf850"
+				temporaryMapping="true"
+				x="176"
+				y="243"
+				invocationOrder="1"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="f5093631-1179-4ac1-b76d-44015a4d1643"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/transformers</from>
+				<to>list</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="d10e16ed-f4f9-4a38-a453-6e89767e275d"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result67b07fbf332742ebb00eff52323bf850/size</from>
+			<to>amountOfTransformers</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
+			disabled="false"
+			id="df5b996e-eb7c-4d64-8599-0f1ee8ef6326"
+			lineNumber="3"
+			query="amountOfTransformers">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="The input records are untransformed"
+				disabled="false"
+				id="e385f0c1-113b-42ec-bb3f-e48abefae199"
+				label="0"
+				lineNumber="4">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="9d089526-ca07-4187-ad7b-40311640f1b4"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/records</from>
+				<to>output/transformed</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+				disabled="false"
+				id="980b938b-74f6-483e-9b16-2f3cc398874d"
+				lineNumber="5">
+			<steps xsi:type="be.nabu.libs.services.vm.step.For"
+					disabled="false"
+					id="a8461887-612e-4c67-8197-395c6a4cfc45"
+					lineNumber="6"
+					variable="transformer"
+					index="transformerIndex">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+						disabled="false"
+						id="894750cc-0549-469d-bd1d-889322d83d1b"
+						lineNumber="7">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+							disabled="false"
+							id="2c60001a-78de-4b39-a94d-e8aa1c82283b"
+							serviceId="nabu.frameworks.io.utils.getServiceProperties"
+							resultName="resulte72f375a334e4ae3822c20112e636315"
+							temporaryMapping="true"
+							x="135"
+							y="35"
+							invocationOrder="0"
+							asynchronous="false"
+							recache="false">
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="8d3440fb-905b-47a0-9acf-9317e04fa4f4"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>transformer/properties</from>
+							<to>properties</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="aa54c2eb-54e6-46c1-b578-7e58f874a05a"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>transformer/transformerId</from>
+							<to>serviceId</to>
+						</steps>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="90d71be7-dd19-48a8-a8a4-80e0169380a7"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>resulte72f375a334e4ae3822c20112e636315/properties</from>
+						<to>propertiesInput</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+						disabled="false"
+						id="b84f58fd-1946-427b-ab7e-fb0f18e94039"
+						lineNumber="8">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+							disabled="false"
+							id="25143619-66d4-4f5c-afba-90732fbc0be2"
+							serviceId="nabu.frameworks.io.specs.transform"
+							resultName="result8f0a7050f86047b8a12da3b81f72a855"
+							temporaryMapping="true"
+							x="105"
+							y="49"
+							invocationOrder="0"
+							asynchronous="false"
+							recache="false">
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="283b7f0e-3d79-47a0-be18-5d794a94c308"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>transformer/transformerId</from>
+							<to>implementationId</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="a1cc1ded-f539-483d-845f-ea1d2c3788cf"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>propertiesInput</from>
+							<to>properties</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="a881b56c-bb86-472c-9360-e19546e9fc2e"
+								mask="false"
+								optional="false"
+								fixedValue="true">
+							<from>true</from>
+							<to>useAsContext</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="104d0d69-a5d7-464c-b5e6-062c6829f56d"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>recordsToTransform</from>
+							<to>original</to>
+						</steps>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="d9eb2827-0095-481c-85bb-f0a463e9289b"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>result8f0a7050f86047b8a12da3b81f72a855/transformed</from>
+						<to>transformedResults</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
+							disabled="false"
+							id="101f4754-e25c-463b-8145-0c2d9022de5f"
+							path="recordsToTransform" xsi:nil="true"/>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+						comment="If this results in no more records, we stop (e.g. a filter)"
+						disabled="false"
+						id="db421f64-668e-4195-995a-728326189621"
+						label="!transformedResults"
+						lineNumber="9">
+					<count>1</count>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.For"
+						disabled="false"
+						id="c1504d25-dd4d-4d1a-8614-574dee4b99f2"
+						lineNumber="10"
+						variable="transformedResult"
+						into="transformedRecords">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+							comment="Map main"
+							disabled="false"
+							id="db6b095b-688b-40d7-aecd-a789e9f03eca"
+							lineNumber="11">
+						<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+								disabled="false"
+								id="36a5ae89-0793-4b45-a018-01f7cb91b66a"
+								serviceId="nabu.utils.Server.uuid"
+								resultName="resulta7be126a0a5b4e78a081f788f0a5d666"
+								temporaryMapping="true"
+								x="153"
+								y="81"
+								invocationOrder="0"
+								asynchronous="false"
+								recache="false">
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+								disabled="false"
+								id="08466625-10b5-4f26-a629-9a536fdd2ee5"
+								serviceId="nabu.frameworks.datastore.Services.properties"
+								resultName="result3140e90abb5f48ff8f19400b8ce33323"
+								temporaryMapping="true"
+								x="101"
+								y="281"
+								invocationOrder="0"
+								asynchronous="false"
+								recache="false">
+							<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+									disabled="false"
+									id="8170d9a9-5eec-4dd7-98b3-a1a87912d050"
+									mask="false"
+									optional="false"
+									fixedValue="false">
+								<from>transformedResult/uri</from>
+								<to>uri</to>
+							</steps>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="b3a6365a-a37a-4221-a1e9-d98e6bd4d974"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>resulta7be126a0a5b4e78a081f788f0a5d666/uuid</from>
+							<to>transformedRecords[0]/id</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="39f89e78-bffc-4220-9b10-6315277dd951"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>transformedResult/uri</from>
+							<to>transformedRecords[0]/uri</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="b8569041-405e-4a3f-abb8-99c4ba26045d"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>result3140e90abb5f48ff8f19400b8ce33323/properties/contentType</from>
+							<to>transformedRecords[0]/contentType</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="74729d10-4968-4734-88fb-8b7d10f900d1"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>result3140e90abb5f48ff8f19400b8ce33323/properties/name</from>
+							<to>transformedRecords[0]/contentName</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="5daf8faf-e319-4878-8ba6-4ff8b631bc99"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>result3140e90abb5f48ff8f19400b8ce33323/properties/size</from>
+							<to>transformedRecords[0]/contentSize</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+								disabled="false"
+								id="e847d3d8-fbe8-438f-900a-748cccc987da"
+								serviceId="nabu.frameworks.io.utils.getResultProperties"
+								resultName="result61cbbf21da414b56b9eb0b7e94a53368"
+								temporaryMapping="true"
+								x="154"
+								y="169"
+								invocationOrder="0"
+								asynchronous="false"
+								recache="false">
+							<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+									disabled="false"
+									id="6937b6e9-bb9e-4991-94dc-fd6ce896620c"
+									mask="false"
+									optional="false"
+									fixedValue="false">
+								<from>transformedResult</from>
+								<to>result</to>
+							</steps>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="2c7ab81a-728a-4dd7-bef3-accff8a8dd8d"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>result61cbbf21da414b56b9eb0b7e94a53368/properties</from>
+							<to>transformedRecords[0]/properties</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="65d41a7a-e619-4d10-bfb6-10b745c1045b"
+								mask="false"
+								optional="false"
+								fixedValue="true">
+							<from>=transformerIndex + 1</from>
+							<to>transformedRecords[0]/depth</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="4139ad6c-7b0a-41a6-a021-c47a6dff74b5"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/channelInstanceId</from>
+							<to>transformedRecords[0]/channelInstanceId</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="aea8c428-cf6d-47b8-839c-287c1e17c244"
+								mask="false"
+								optional="false"
+								fixedValue="true">
+							<from>=transformerIndex &gt;= amountOfTransformers - 1</from>
+							<to>transformedRecords[0]/final</to>
+						</steps>
+					</steps>
+					<query>transformedResults</query>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+						disabled="false"
+						id="b41ff21e-0ffb-4011-b831-ee44a142d788"
+						lineNumber="12">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+							disabled="false"
+							id="a82ab0e4-9b37-4749-be63-49ca97cc0eb4"
+							serviceId="nabu.services.jdbc.Services.insert"
+							resultName="result160a02d283f54c3bbf4d792200c221a4"
+							temporaryMapping="true"
+							x="111"
+							y="82"
+							invocationOrder="0"
+							asynchronous="false"
+							recache="false">
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="bf5589e1-ad2d-4542-9bee-16086f4d79d1"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>transformedRecords</from>
+							<to>instances</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="559d93a7-e019-4835-934d-4a926c7433c1"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/connectionId</from>
+							<to>connection</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="52091e3b-2b34-435e-8468-fc6de12f01d0"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/transactionId</from>
+							<to>transaction</to>
+						</steps>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+						comment="Map it to the records to be transformed"
+						disabled="false"
+						id="a49546d1-c906-43d6-baef-78416bfe26e7"
+						lineNumber="13">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
+							disabled="false"
+							id="aff26328-9070-4385-bc14-1ea2615f2143"
+							path="transformedRecords" xsi:nil="true"/>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="e9e5a167-d097-4325-800c-f389dd17963e"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>transformedRecords</from>
+						<to>recordsToTransform</to>
+					</steps>
+				</steps>
+				<query>input/transformers</query>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					comment="At the end the last &quot;recordsToTransform&quot; is the final result, map it to the output"
+					disabled="false"
+					id="aa68a029-a083-42b0-95ec-a5454ec7dc3e"
+					lineNumber="14">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="c9fccd1a-ecde-4083-a30b-5830c2829ac3"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>recordsToTransform</from>
+					<to>output/transformed</to>
+				</steps>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

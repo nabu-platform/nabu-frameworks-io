@@ -1,0 +1,7 @@
+<structure collectionName="channelProviders" name="channelProvider">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field comment="The service that does the actual transfer." name="transferServiceId" type="java.lang.String"/>
+    <field comment="The finalization service will for example delete files." minOccurs="0" name="finalizationServiceId" type="java.lang.String"/>
+    <field name="name" type="java.lang.String"/>
+    <field comment="IN or OUT" name="direction" type="java.lang.String"/>
+</structure>

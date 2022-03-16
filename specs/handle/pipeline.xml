@@ -1,0 +1,6 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure definition="nabu.frameworks.io.specs.handleInput" maxOccurs="unbounded" minOccurs="0" name="transfers" restrict="final, parentId, taskId"/>
+    </structure>
+    <structure name="output"/>
+</structure>

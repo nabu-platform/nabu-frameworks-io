@@ -1,0 +1,11 @@
+<structure collectionName="channelInstanceData" name="channelInstanceData">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field comment="JSON stringified version of the instantiated properties for the provider (e.g. resolved dates etc)" minOccurs="0" name="properties" type="java.lang.String"/>
+    <field comment="The actual data" name="uri" type="java.net.URI"/>
+    <field comment="The name of the file" minOccurs="0" name="contentName" type="java.lang.String"/>
+    <field minOccurs="0" name="contentType" type="java.lang.String"/>
+    <field name="contentSize" type="java.lang.Long"/>
+    <field foreignKey="nabu.frameworks.io.database.types.channelInstance:id" name="channelInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="If set to 0, this is the &quot;raw&quot; data, each layer of transformation adds 1" name="depth" type="java.lang.Long"/>
+    <field comment="Whether or not this is the &quot;final&quot; data for this channel instance. Data can be intermediate (e.g. still needs to be transformed)" name="final" type="java.lang.Boolean"/>
+</structure>

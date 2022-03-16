@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2018-10-18T11:18:17.558+02:00" lastModified="2022-03-16T16:43:19.377+01:00" leaf="true" version="19">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.utils.List.add</references>
+    <references>nabu.protocols.jdbc.pool.Services.listCollectionTypes</references>
+    <references>nabu.utils.Server.log</references>
+    <references>nabu.utils.reflection.Node.listByType</references>
+    <references>nabu.utils.List.size</references>
+    <references>nabu.protocols.jdbc.pool.types.JDBCPoolInformation</references>
+    <references>nabu.protocols.jdbc.pool.Services.information</references>
+    <references>java.lang.String</references>
+    <references>nabu.utils.types.NodeDescription</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.protocols.jdbc.pool.Services.synchronize</references>
+</node>

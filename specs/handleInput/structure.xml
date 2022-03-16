@@ -1,0 +1,1 @@
+<structure name="handleInput" restrict="depth, final" superType="nabu.frameworks.io.database.types.channelInstanceData"/>

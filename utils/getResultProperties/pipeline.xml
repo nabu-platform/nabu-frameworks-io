@@ -1,0 +1,10 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure definition="nabu.frameworks.io.specs.transferResult" name="result"/>
+    </structure>
+    <structure name="output">
+        <field minOccurs="0" name="properties" type="java.lang.String"/>
+    </structure>
+    <field minOccurs="0" name="amount" type="java.lang.Integer"/>
+    <structure definition="nabu.frameworks.io.specs.propertyList" name="propertyList"/>
+</structure>

@@ -1,0 +1,1 @@
+<structure name="transferInput" restrict="id" superType="nabu.frameworks.io.specs.handleInput"/>

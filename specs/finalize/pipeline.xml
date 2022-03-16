@@ -1,0 +1,7 @@
+<structure comment="&#10;" name="pipeline">
+    <structure name="input">
+        <structure comment="The same properties as the transfer service" definition="java.lang.Object" minOccurs="0" name="properties"/>
+        <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    </structure>
+    <structure name="output"/>
+</structure>

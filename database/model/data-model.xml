@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>617</x>
+        <y>234</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.io.database.types.channel</type>
+        <x>59</x>
+        <y>435</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.io.database.types.channelProvider</type>
+        <x>42</x>
+        <y>114</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.io.database.types.channelTransformer</type>
+        <x>549</x>
+        <y>574</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>789</x>
+        <y>72</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.io.database.types.channelInstance</type>
+        <x>450</x>
+        <y>187</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.io.database.types.channelInstanceData</type>
+        <x>845</x>
+        <y>68</y>
+    </entries>
+</dataModel>
