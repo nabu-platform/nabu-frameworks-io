@@ -1,6 +1,0 @@
-<structure name="pipeline">
-    <structure name="input" restrict="properties">
-        <structure definition="nabu.frameworks.io.providers.directory.retrieveProperties" name="properties"/>
-    </structure>
-    <structure name="output"/>
-</structure>

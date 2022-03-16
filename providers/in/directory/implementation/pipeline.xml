@@ -1,0 +1,7 @@
+<structure interface="nabu.frameworks.io.specs.transferIn" name="pipeline">
+    <structure name="input" restrict="properties">
+        <structure definition="nabu.frameworks.io.providers.in.directory.properties" name="properties"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="be.nabu.libs.resources.api.ResourceProperties" maxOccurs="unbounded" minOccurs="0" name="files"/>
+</structure>

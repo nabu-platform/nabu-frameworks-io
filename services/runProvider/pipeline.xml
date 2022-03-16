@@ -1,9 +1,0 @@
-<structure name="pipeline">
-    <structure name="input">
-        <field comment="If there is a parent, we need to log it." minOccurs="0" name="parentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
-    </structure>
-    <structure name="output">
-        <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="transfers"/>
-    </structure>
-    <field maxOccurs="unbounded" minOccurs="0" name="responses" type="java.net.URI"/>
-</structure>

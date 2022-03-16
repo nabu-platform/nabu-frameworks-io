@@ -5,7 +5,6 @@
         <field comment="Probably not relevant in most cases, but we know it and it might be useful" minOccurs="0" name="offset" type="java.lang.Long"/>
     </structure>
     <structure name="output">
-        <structure definition="java.lang.Object" minOccurs="0" name="finalizationProperties"/>
         <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
         <field comment="Set to true if the limit was respected" minOccurs="0" name="limited" type="java.lang.Boolean"/>
     </structure>

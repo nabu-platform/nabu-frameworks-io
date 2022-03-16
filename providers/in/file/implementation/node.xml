@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2018-07-03T15:43:10.190+02:00" lastModified="2022-03-16T17:21:45.480+01:00" leaf="true" version="22">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.datastore.Services.store</references>
+    <references>nabu.utils.Resource.properties</references>
+    <references>nabu.frameworks.io.specs.transferIn</references>
+    <references>java.lang.Long</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.Object</references>
+    <references>nabu.utils.Resource.read</references>
+    <references>nabu.frameworks.io.providers.in.file.properties</references>
+    <references>nabu.frameworks.io.specs.transferResult</references>
+    <references>be.nabu.libs.resources.api.ResourceProperties</references>
+</node>

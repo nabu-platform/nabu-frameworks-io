@@ -1,0 +1,65 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="5051a94a-1378-42aa-8b14-dc1f0a9bf246"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="db97679e-9cfd-402f-b4a8-d9873f36df0a"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="2f310148-0414-4a14-9e6f-9a24e7b0328d"
+				serviceId="nabu.utils.Resource.list"
+				resultName="result02f682d8c2284b6782513d250ca14805"
+				temporaryMapping="true"
+				x="80"
+				y="68"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="7833d2af-fa7d-4f56-8424-1956dcb0fe1d"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/uri</from>
+				<to>uri</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="9706ff84-49d5-44a8-a90f-7ff0ae38623d"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/recursive</from>
+				<to>recursive</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="8289c1bd-c6c8-4dfd-93e4-932621d134a5"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/fileRegex</from>
+				<to>fileFilter</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="c354511e-8fb5-4f66-8ff9-f56e810668dd"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result02f682d8c2284b6782513d250ca14805/children</from>
+			<to>files</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="b5cafddc-f846-40fb-83fb-951887d82ef3"
+			lineNumber="3"
+			variable="file">
+		<query>files</query>
+	</steps>
+</sequence>

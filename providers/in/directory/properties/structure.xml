@@ -5,5 +5,4 @@
     <field minOccurs="0" name="deleteOriginal" type="java.lang.Boolean"/>
     <field comment="The directory that a processed file should be moved to" minOccurs="0" name="processedDirectory" type="java.lang.String"/>
     <field comment="The extension a processed file should get" minOccurs="0" name="processedExtension" type="java.lang.String"/>
-    <field comment="You can choose to zip all the resulting files and use that." minOccurs="0" name="zip" type="java.lang.Boolean"/>
 </structure>

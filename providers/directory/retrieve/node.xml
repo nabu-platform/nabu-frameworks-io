@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2018-07-03T15:43:10.190+02:00" lastModified="2022-03-15T12:21:18.679+01:00" leaf="true" version="5">
-    <environmentId>apollo</environmentId>
-    <hidden>false</hidden>
-    <properties/>
-    <references>nabu.frameworks.io.providers.directory.retrieveProperties</references>
-</node>
