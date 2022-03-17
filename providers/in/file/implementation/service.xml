@@ -33,8 +33,8 @@
 				serviceId="nabu.frameworks.datastore.Services.store"
 				resultName="result82c812a540a8491e9e7a89a592c1fde8"
 				temporaryMapping="true"
-				x="794"
-				y="146"
+				x="436"
+				y="72"
 				invocationOrder="1"
 				asynchronous="false"
 				recache="false">
@@ -64,6 +64,15 @@
 					fixedValue="false">
 				<from>result76fd6db313924e3caad47545827919f3/properties/contentType</from>
 				<to>contentType</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="42579256-4fcc-4bf2-93e3-ed8e15754df9"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/context</from>
+				<to>context</to>
 			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
@@ -95,6 +104,15 @@
 				fixedValue="false">
 			<from>result82c812a540a8491e9e7a89a592c1fde8/uri</from>
 			<to>output/results[0]/uri</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="36063425-5ad5-4c54-a8f6-4dc48037b379"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/properties/uri</from>
+			<to>output/results[0]/originalUri</to>
 		</steps>
 	</steps>
 </sequence>

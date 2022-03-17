@@ -1,6 +1,6 @@
 <structure name="pipeline">
     <structure name="input">
-        <structure definition="nabu.frameworks.io.specs.transferResult" name="result"/>
+        <structure definition="java.lang.Object" name="result"/>
     </structure>
     <structure name="output">
         <field minOccurs="0" name="properties" type="java.lang.String"/>

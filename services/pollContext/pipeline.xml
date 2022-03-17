@@ -1,0 +1,9 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="context" type="java.lang.String"/>
+        <field minOccurs="0" name="limit" type="java.lang.Long"/>
+    </structure>
+    <structure name="output"/>
+    <field minOccurs="0" name="connectionId" type="java.lang.String"/>
+    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" maxOccurs="unbounded" minOccurs="0" name="channels"/>
+</structure>

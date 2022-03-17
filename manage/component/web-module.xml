@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <path>/io</path>
+    <webFragments>nabu.frameworks.io.manage.crud.channelInstance</webFragments>
+    <webFragments>nabu.frameworks.io.manage.crud.channelInstanceData</webFragments>
+    <webFragments>nabu.frameworks.io.manage.crud.channelProvider</webFragments>
+    <webFragments>nabu.frameworks.io.manage.crud.channelTransformer</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.suggest.transferOut</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.suggest.transferIn</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.suggest.handler</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.suggest.finalize</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.channel.create</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.channel.update</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.channel.listProperties</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.channelProvider.listProperties</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.channel.list</webFragments>
+</webModule>

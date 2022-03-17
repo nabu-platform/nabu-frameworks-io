@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2022-03-17T12:29:19.139+01:00" lastModified="2022-03-17T13:06:10.418+01:00" leaf="true" version="14">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.io.manage.rest.channel.servicePropertyList</references>
+    <references>nabu.utils.types.ParameterDescription</references>
+    <references>nabu.frameworks.io.crud.channelProvider.services.get</references>
+    <references>nabu.utils.String.conventionize</references>
+    <references>nabu.frameworks.io.crud.channelProvider.types.output</references>
+    <references>nabu.utils.reflection.Type.describe</references>
+</node>

@@ -2,10 +2,32 @@
 		disabled="false"
 		id="5051a94a-1378-42aa-8b14-dc1f0a9bf246"
 		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
+			disabled="false"
+			id="44f9fe09-6ee9-4f98-ae74-d08693cf5c85"
+			label="input/properties/uri == null"
+			lineNumber="2"
+			message="No directory configured to pick up files from" xsi:nil="true"/>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="All files"
+			disabled="false"
+			id="8ec35fce-4dba-47c6-88dd-07eec5911ff1"
+			label="input/properties/fileRegex == null"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="f6da820a-4afc-4f8d-93fb-9cea63172559"
+				mask="false"
+				optional="false"
+				fixedValue="true">
+			<from>.*</from>
+			<to>input/properties/fileRegex</to>
+		</steps>
+	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="db97679e-9cfd-402f-b4a8-d9873f36df0a"
-			lineNumber="2">
+			lineNumber="4">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="2f310148-0414-4a14-9e6f-9a24e7b0328d"
@@ -58,8 +80,72 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.For"
 			disabled="false"
 			id="b5cafddc-f846-40fb-83fb-951887d82ef3"
-			lineNumber="3"
-			variable="file">
+			lineNumber="5"
+			variable="file"
+			index="index"
+			into="output/results">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="8cac6dcc-af60-4329-a6e0-7216f4eb3ef1"
+				lineNumber="6">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="51572b2f-905a-41a2-b24e-c1056523b45d"
+					serviceId="nabu.frameworks.io.providers.in.file.implementation"
+					resultName="resulteda7641bd08f4f5081fd502ddf393d77"
+					temporaryMapping="true"
+					x="63"
+					y="61"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="64548dd8-edc7-4fdc-b1ac-05e8a3fd0f2d"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>file/uri</from>
+					<to>properties/uri</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="ea415152-46fa-49c1-8919-36e8a294d2c2"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>resulteda7641bd08f4f5081fd502ddf393d77/results</from>
+				<to>output/results</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+				disabled="false"
+				id="f2683655-2c5a-4959-bd59-1ae71f8e27ee"
+				label="input/limit != null &amp;&amp; index &gt;= input/limit - 1"
+				lineNumber="7">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					comment="Set limited output"
+					disabled="false"
+					id="d14d900a-df58-4a27-81fc-0e37e1016d41"
+					lineNumber="8">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="e2b1e891-0561-4ddc-99dd-47b95d375083"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>true</from>
+					<to>output/limited</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+					disabled="false"
+					id="dd9954fc-97a4-4998-84cf-7c6b1824bf43"
+					lineNumber="9">
+				<count>2</count>
+			</steps>
+		</steps>
 		<query>files</query>
 	</steps>
 </sequence>

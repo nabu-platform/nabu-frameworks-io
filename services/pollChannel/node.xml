@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-03-16T07:35:47.124+01:00" lastModified="2022-03-16T17:00:34.352+01:00" leaf="true" version="146">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-03-16T07:35:47.124+01:00" lastModified="2022-03-17T15:35:02.383+01:00" leaf="true" version="164">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
@@ -8,7 +8,6 @@
     <references>nabu.utils.Server.uuid</references>
     <references>nabu.frameworks.io.crud.channelTransformer.types.output</references>
     <references>java.lang.Integer</references>
-    <references>nabu.frameworks.io.specs.transferResult</references>
     <references>nabu.services.jdbc.Services.insert</references>
     <references>nabu.frameworks.io.utils.getResultProperties</references>
     <references>nabu.frameworks.io.specs.transferIn</references>
@@ -19,6 +18,7 @@
     <references>nabu.frameworks.io.crud.channelTransformer.services.list</references>
     <references>nabu.frameworks.io.utils.finalize</references>
     <references>nabu.frameworks.io.crud.channel.services.get</references>
+    <references>nabu.utils.reflection.Type.get</references>
     <references>nabu.frameworks.io.utils.getServiceProperties</references>
     <references>nabu.utils.Date.now</references>
     <references>nabu.frameworks.io.specs.handle</references>

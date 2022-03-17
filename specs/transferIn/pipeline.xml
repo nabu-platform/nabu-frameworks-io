@@ -3,6 +3,7 @@
         <structure definition="java.lang.Object" minOccurs="0" name="properties"/>
         <field minOccurs="0" name="limit" type="java.lang.Long"/>
         <field comment="Probably not relevant in most cases, but we know it and it might be useful" minOccurs="0" name="offset" type="java.lang.Long"/>
+        <field minOccurs="0" name="context" type="java.lang.String"/>
     </structure>
     <structure name="output">
         <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="results"/>

@@ -1,0 +1,8 @@
+<structure interface="nabu.frameworks.io.specs.finalize" name="pipeline">
+    <structure name="input" restrict="results, properties">
+        <structure definition="nabu.frameworks.io.providers.in.file.properties" name="properties"/>
+        <structure definition="nabu.frameworks.io.providers.in.file.fileResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="be.nabu.libs.resources.api.ResourceProperties" minOccurs="0" name="properties"/>
+</structure>

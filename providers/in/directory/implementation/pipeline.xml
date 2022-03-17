@@ -2,6 +2,8 @@
     <structure name="input" restrict="properties">
         <structure definition="nabu.frameworks.io.providers.in.directory.properties" name="properties"/>
     </structure>
-    <structure name="output"/>
+    <structure name="output" restrict="results">
+        <structure definition="nabu.frameworks.io.providers.in.file.fileResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    </structure>
     <structure definition="be.nabu.libs.resources.api.ResourceProperties" maxOccurs="unbounded" minOccurs="0" name="files"/>
 </structure>

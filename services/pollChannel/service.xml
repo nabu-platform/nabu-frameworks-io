@@ -386,24 +386,6 @@
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="195c81bf-7eec-4d8d-ae37-3bc985920c66"
-						mask="false"
-						optional="false"
-						fixedValue="false">
-					<from>input/limit</from>
-					<to>channelInstance/limit</to>
-				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-						disabled="false"
-						id="7851a33a-cc30-48e6-a82a-1d1ec50e7fd6"
-						mask="false"
-						optional="false"
-						fixedValue="false">
-					<from>offset</from>
-					<to>channelInstance/offset</to>
-				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-						disabled="false"
 						id="4661f4aa-975d-4a18-a6e1-63b69fb90652"
 						mask="false"
 						optional="false"
@@ -437,6 +419,24 @@
 						fixedValue="false">
 					<from>channelProperties</from>
 					<to>channelInstance/properties</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="e503320c-592b-4ce4-9c27-f27166adf1e9"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/limit</from>
+					<to>channelInstance/resultLimit</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="4c088f0f-1725-4bed-b0e7-8825236ed2aa"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>offset</from>
+					<to>channelInstance/resultOffset</to>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
@@ -548,7 +548,7 @@
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="9035ebe7-216b-4b17-b1df-775c1b7c70ce"
+						id="c4fb8849-8d0a-4aaf-9524-d8f88c1dbbae"
 						mask="false"
 						optional="false"
 						fixedValue="false">
@@ -562,39 +562,31 @@
 					id="7408be5b-0cd6-4e70-b04f-a5abe5ad8928"
 					lineNumber="14"
 					variable="transferResult"
+					index="transferIndex"
 					into="transferRecords">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						comment="Map main"
 						disabled="false"
 						id="ed625301-ee1c-4611-8e93-2ea96cdc6985"
 						lineNumber="15">
-					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-							disabled="false"
-							id="31bef3d5-0c79-4c1e-8e8d-39493a390326"
-							mask="false"
-							optional="false"
-							fixedValue="false">
-						<from>transferResult/uri</from>
-						<to>transferRecords[0]/uri</to>
-					</steps>
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="d3de86bb-0bcd-4115-9cb5-33d8192c2d1d"
 							serviceId="nabu.frameworks.datastore.Services.properties"
 							resultName="result223cf6bb0e884cedad723b7798bce1f8"
 							temporaryMapping="true"
-							x="17"
+							x="270"
 							y="64"
-							invocationOrder="0"
+							invocationOrder="1"
 							asynchronous="false"
 							recache="false">
 						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 								disabled="false"
-								id="94e61689-e4f1-403f-a615-4341e703b206"
+								id="80170d4d-c69e-41e4-82f6-77b0f533279a"
 								mask="false"
 								optional="false"
 								fixedValue="false">
-							<from>transferResult/uri</from>
+							<from>result437c3bb237a44cdb8bbb84d277ab0477/value</from>
 							<to>uri</to>
 						</steps>
 					</steps>
@@ -652,14 +644,14 @@
 							serviceId="nabu.frameworks.io.utils.getResultProperties"
 							resultName="result0fb5b09271164d1d95ac4e348add1f5f"
 							temporaryMapping="true"
-							x="88"
-							y="308"
+							x="125"
+							y="312"
 							invocationOrder="0"
 							asynchronous="false"
 							recache="false">
 						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 								disabled="false"
-								id="0ffb0a59-2402-4670-9a60-a6e68f3b36b3"
+								id="ad960413-cd09-4446-b7a1-694de57de2b7"
 								mask="false"
 								optional="false"
 								fixedValue="false">
@@ -702,6 +694,45 @@
 							fixedValue="true">
 						<from>=amountOfTransformers == 0</from>
 						<to>transferRecords[0]/final</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+							disabled="false"
+							id="2aa884c3-935f-4ab0-b2bb-771d26e038f3"
+							serviceId="nabu.utils.reflection.Type.get"
+							resultName="result437c3bb237a44cdb8bbb84d277ab0477"
+							temporaryMapping="true"
+							x="93"
+							y="406"
+							invocationOrder="0"
+							asynchronous="false"
+							recache="false">
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="5da7e299-121b-4273-b375-e0d18a1c8a76"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>transferResult</from>
+							<to>typeInstance</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="28e40775-dd48-45b8-a101-ef6786b9f170"
+								mask="false"
+								optional="false"
+								fixedValue="true">
+							<from>uri</from>
+							<to>path</to>
+						</steps>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="338b4508-8e1c-4bb3-a9b8-e169cbcafc59"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>result437c3bb237a44cdb8bbb84d277ab0477/value</from>
+						<to>transferRecords[0]/uri</to>
 					</steps>
 				</steps>
 				<query>transferResults</query>

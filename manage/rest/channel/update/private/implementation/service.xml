@@ -1,0 +1,200 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="db49c158-0907-4080-a3c0-72064737682e"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="9689b45b-5d4d-4fd7-8785-44e91baf1bab"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="24d83f34-a524-472f-983b-cc540deb7349"
+				serviceId="nabu.frameworks.io.manage.crud.channel.services.get"
+				resultName="result4bc214a96d534c6d9e2e79563cfa0a80"
+				temporaryMapping="true"
+				x="104"
+				y="49"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="512a3694-30fd-4c46-9d36-c41d229ac714"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/channelId</from>
+				<to>id</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="0328dfc3-e512-4376-a5e2-7b9472021229"
+				mask="true"
+				optional="false"
+				fixedValue="false">
+			<from>result4bc214a96d534c6d9e2e79563cfa0a80/result</from>
+			<to>channel</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
+			disabled="false"
+			id="1674b0bb-7bf1-4986-b698-eab0c4e97483"
+			label="!channel"
+			lineNumber="3"
+			code="404" xsi:nil="true"/>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Map main"
+			disabled="false"
+			id="548aa048-20a4-4e0c-9e47-66a57a320e0b"
+			lineNumber="4">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="31831733-01a2-4b93-9880-537446016357"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/name</from>
+			<to>channel/name</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="c4584cb3-9bea-41a5-ad33-8321e6647aac"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/enabled</from>
+			<to>channel/enabled</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="6802fe42-66ce-4271-93ee-3636d4bd26e8"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/channelProviderId</from>
+			<to>channel/channelProviderId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="e02598a6-a3ca-4593-b5b6-96a257cb6cea"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/handlerId</from>
+			<to>channel/handlerId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="d913daf0-f241-4a12-b1a2-744b4e5f61f2"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/queue</from>
+			<to>channel/queue</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="2d503437-3dbc-4cb3-892a-3b52093c6b2e"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/context</from>
+			<to>channel/context</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
+				disabled="false"
+				id="c10ffd3c-fa9f-4485-baf7-d6a3de141819"
+				path="channel/properties" xsi:nil="true"/>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+			disabled="false"
+			id="864ef9d8-0b7a-4910-8896-2d427d43af2a"
+			label="input/content/properties != null"
+			lineNumber="5">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="7e9d8082-9a63-4a7c-8cd1-8bbdb226c179"
+				lineNumber="6">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="1d0a6b83-62b5-43b4-8229-631f31dc6c5a"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/content/properties</from>
+				<to>propertyList/properties</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="03982f0c-e72f-4cb1-8f3d-2c0b7b41a045"
+				lineNumber="7">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="23bc2d6b-055d-4241-8612-8219aed58672"
+					serviceId="nabu.data.json.Services.marshal"
+					resultName="result1a8fe7b1ec1042f0ac3e27a1d256dd0e"
+					temporaryMapping="true"
+					x="95"
+					y="200"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="481be5e7-286a-403a-8c65-db3e40a0d943"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>propertyList</from>
+					<to>data</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="49a02952-9675-449a-b4b6-ec2ded677ce2"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result1a8fe7b1ec1042f0ac3e27a1d256dd0e/marshalled</from>
+				<to>channel/properties</to>
+			</steps>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="d211b064-5257-4bab-8c09-9316a6acc912"
+			lineNumber="8">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="57e526d5-22d8-4348-8bf0-b45cbf7f480e"
+				serviceId="nabu.frameworks.io.manage.crud.channel.services.update"
+				resultName="resultc44c2b6a1cc14e009e23d6590498cf8e"
+				temporaryMapping="true"
+				x="89"
+				y="124"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="1b72bcbf-b150-4154-af8d-8f23c0dfb635"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>channel</from>
+				<to>instance</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="09a73331-314d-44d6-b9ef-07bb436020ee"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/channelId</from>
+				<to>id</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

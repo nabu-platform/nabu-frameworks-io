@@ -33,7 +33,7 @@
 				mask="false"
 				optional="false"
 				fixedValue="false">
-			<from>result81eecbcab0174d5fb4f1ff4826b9fbd4/properties</from>
+			<from>result81eecbcab0174d5fb4f1ff4826b9fbd4/properties[key != "uri"]</from>
 			<to>propertyList/properties</to>
 		</steps>
 	</steps>

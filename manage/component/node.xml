@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2022-03-17T11:57:33.029+01:00" lastModified="2022-03-17T13:15:13.916+01:00" leaf="true" version="11">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.io.manage.crud.channelInstance</references>
+    <references>nabu.frameworks.io.manage.crud.channelInstanceData</references>
+    <references>nabu.frameworks.io.manage.crud.channelProvider</references>
+    <references>nabu.frameworks.io.manage.crud.channelTransformer</references>
+    <references>nabu.frameworks.io.manage.rest.suggest.transferOut</references>
+    <references>nabu.frameworks.io.manage.rest.suggest.transferIn</references>
+    <references>nabu.frameworks.io.manage.rest.suggest.handler</references>
+    <references>nabu.frameworks.io.manage.rest.suggest.finalize</references>
+    <references>nabu.frameworks.io.manage.rest.channel.create</references>
+    <references>nabu.frameworks.io.manage.rest.channel.update</references>
+    <references>nabu.frameworks.io.manage.rest.channel.listProperties</references>
+    <references>nabu.frameworks.io.manage.rest.channelProvider.listProperties</references>
+    <references>nabu.frameworks.io.manage.rest.channel.list</references>
+</node>

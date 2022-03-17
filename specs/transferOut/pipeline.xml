@@ -2,6 +2,7 @@
     <structure name="input">
         <structure definition="java.lang.Object" minOccurs="0" name="properties"/>
         <field maxOccurs="unbounded" minOccurs="0" name="uris" type="java.net.URI"/>
+        <field minOccurs="0" name="context" type="java.lang.String"/>
     </structure>
     <structure name="output">
         <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="results"/>

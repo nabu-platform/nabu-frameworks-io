@@ -1,0 +1,3 @@
+<structure name="suggestionList">
+    <structure definition="nabu.frameworks.io.manage.rest.suggest.suggestion" maxOccurs="unbounded" minOccurs="0" name="suggestions"/>
+</structure>

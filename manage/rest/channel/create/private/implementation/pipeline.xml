@@ -1,0 +1,6 @@
+<structure interface="nabu.frameworks.io.manage.rest.channel.create:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="channels" definition="nabu.frameworks.io.manage.crud.channel.types.createInput" name="channel" restrict="id"/>
+    <structure definition="nabu.frameworks.io.specs.propertyList" name="propertyList"/>
+</structure>

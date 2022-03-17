@@ -1,0 +1,3 @@
+<structure name="updateInput" restrict="properties" superType="nabu.frameworks.io.manage.crud.channel.types.updateInput">
+    <structure definition="nabu.utils.types.Property" maxOccurs="unbounded" minOccurs="0" name="properties"/>
+</structure>

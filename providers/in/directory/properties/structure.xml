@@ -1,8 +1,7 @@
 <structure name="properties">
     <field name="uri" type="java.net.URI"/>
-    <field name="fileRegex" type="java.lang.String"/>
+    <field minOccurs="0" name="fileRegex" type="java.lang.String"/>
     <field minOccurs="0" name="recursive" type="java.lang.Boolean"/>
     <field minOccurs="0" name="deleteOriginal" type="java.lang.Boolean"/>
-    <field comment="The directory that a processed file should be moved to" minOccurs="0" name="processedDirectory" type="java.lang.String"/>
     <field comment="The extension a processed file should get" minOccurs="0" name="processedExtension" type="java.lang.String"/>
 </structure>

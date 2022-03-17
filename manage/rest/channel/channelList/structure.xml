@@ -1,0 +1,4 @@
+<structure name="channelList">
+    <structure definition="nabu.frameworks.io.manage.rest.channel.channelOutput" maxOccurs="unbounded" minOccurs="0" name="channels" restrict="properties"/>
+    <structure definition="be.nabu.eai.module.services.crud.Page" minOccurs="0" name="page"/>
+</structure>

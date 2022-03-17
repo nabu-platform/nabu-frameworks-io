@@ -1,0 +1,65 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="91eed375-fa42-4852-a31d-9d277346c399"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="2677568a-9cc2-403f-a182-0595b1c53cb4"
+			lineNumber="2"
+			variable="result">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="7b4419d0-0a53-4e08-be9d-e30f5868f655"
+				lineNumber="3">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="bea7eb81-f702-47b8-b512-1b6170788d71"
+					serviceId="nabu.frameworks.io.providers.in.file.finalizer"
+					resultName="result197665d57e9145429778b73f4e29500c"
+					temporaryMapping="true"
+					x="85"
+					y="37"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="bca9ef77-405d-472d-b263-1f285561d13d"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/properties/deleteOriginal</from>
+					<to>properties/deleteOriginal</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="ac068509-62e4-4ecc-953e-8004e4bf6d8f"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/properties/processedExtension</from>
+					<to>properties/processedExtension</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="ff16de37-cc65-44c7-8c2d-80011344bb46"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>result/originalUri</from>
+					<to>properties/uri</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="1446425e-2426-4482-9042-ed8f3733e098"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/results</from>
+					<to>results</to>
+				</steps>
+			</steps>
+		</steps>
+		<query>input/results</query>
+	</steps>
+</sequence>

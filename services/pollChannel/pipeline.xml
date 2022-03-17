@@ -9,7 +9,6 @@
     <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" name="channelProvider"/>
     <structure definition="java.lang.Object" name="propertiesInput"/>
     <field minOccurs="0" name="limited" type="java.lang.Boolean"/>
-    <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="transferResults"/>
     <field name="looping" type="java.lang.Boolean"/>
     <field name="offset" type="java.lang.Long"/>
     <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="transferRecords"/>
@@ -20,4 +19,5 @@
     <field minOccurs="0" name="amountOfTransformers" type="java.lang.Integer"/>
     <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" maxOccurs="unbounded" minOccurs="0" name="transformers"/>
     <field minOccurs="0" name="channelProperties" type="java.lang.String"/>
+    <structure definition="java.lang.Object" maxOccurs="unbounded" name="transferResults"/>
 </structure>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-03-17T11:21:17.660+01:00" lastModified="2022-03-17T13:22:16.136+01:00" leaf="true" version="8">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.io.providers.in.file.finalizer</references>
+    <references>nabu.frameworks.io.providers.in.file.fileResult</references>
+    <references>java.lang.Object</references>
+    <references>nabu.frameworks.io.providers.in.directory.properties</references>
+    <references>nabu.frameworks.io.specs.finalize</references>
+    <references>nabu.frameworks.io.specs.transferResult</references>
+</node>
