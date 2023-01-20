@@ -1,0 +1,100 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="a5f0bf9b-6071-4014-af25-11eb254d2d0c"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
+			disabled="false"
+			id="5b72bd34322449919b14abe7a0e8238b"
+			lineNumber="2"
+			query="input/path/direction">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="92a02019-d8a4-43ce-8f75-a51c6b5c478f"
+				label="&quot;IN&quot;"
+				lineNumber="3">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="da10a418-fe47-4c8a-b0fa-513a7012fdf6"
+					serviceId="nabu.frameworks.io.manage.rest.suggest.suggestServices"
+					resultName="result6e8f48624b194b5599878cf3857b40c4"
+					temporaryMapping="true"
+					x="30"
+					y="30"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="1c4f1188-89b6-472d-be9d-e73c43f16df2"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>nabu.frameworks.io.specs.transferIn</from>
+					<to>specId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="477ed871-4d0a-4973-98d6-ab98631f5137"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/query/q</from>
+					<to>q</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="f998e689-5fa9-44d2-ac0d-f0bb31a923e9"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result6e8f48624b194b5599878cf3857b40c4/suggestions</from>
+				<to>output/content/suggestions</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="861793b7f0334206a86cb5c79712f37c"
+				lineNumber="4">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="f78974aa033e41468b4867a1e2b19fc1"
+					serviceId="nabu.frameworks.io.manage.rest.suggest.suggestServices"
+					resultName="result6e8f48624b194b5599878cf3857b40c4"
+					temporaryMapping="true"
+					x="30"
+					y="30"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="956e50ed9c1c4b35943e61bf5e804759"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>nabu.frameworks.io.specs.transferOut</from>
+					<to>specId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="fb79974fd9b24ce093938242afda96c5"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/query/q</from>
+					<to>q</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="c4b3541f350843b6b31c6993cc70b408"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result6e8f48624b194b5599878cf3857b40c4/suggestions</from>
+				<to>output/content/suggestions</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

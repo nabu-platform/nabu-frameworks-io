@@ -1,4 +1,4 @@
-<structure interface="$self:api" name="pipeline">
+<structure interface="nabu.frameworks.io.manage.rest.channel.update:api" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
     <structure collectionName="channels" definition="nabu.frameworks.io.manage.crud.channel.types.updateInput" name="channel" restrict="id"/>

@@ -3,6 +3,11 @@
     <method>GET</method>
     <path>/serviceProperties/{serviceId}</path>
     <role>$user</role>
+    <permissionAction>channel.list</permissionAction>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useGlobalPermissionContext>true</useGlobalPermissionContext>
     <output>nabu.frameworks.io.manage.rest.channel.servicePropertyList</output>
     <lenient>true</lenient>
     <webApplicationId>false</webApplicationId>

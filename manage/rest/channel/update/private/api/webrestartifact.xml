@@ -3,6 +3,11 @@
     <method>PUT</method>
     <path>/channel/{channelId}</path>
     <role>$user</role>
+    <permissionAction>channel.manage</permissionAction>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useGlobalPermissionContext>true</useGlobalPermissionContext>
     <input>nabu.frameworks.io.manage.rest.channel.updateInput</input>
     <lenient>true</lenient>
     <webApplicationId>false</webApplicationId>

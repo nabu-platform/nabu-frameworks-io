@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2022-03-17T12:26:36.859+01:00" lastModified="2022-03-17T12:29:04.263+01:00" leaf="true" version="10">
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2022-03-17T12:26:36.859+01:00" lastModified="2023-01-20T13:23:58.417+01:00" leaf="true" version="11">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
     <references>nabu.frameworks.io.manage.crud.channel.services.get</references>
     <references>nabu.frameworks.io.manage.crud.channel.services.update</references>
     <references>nabu.frameworks.io.manage.crud.channel.types.updateInput</references>
     <references>nabu.frameworks.io.manage.rest.channel.updateInput</references>
     <references>nabu.frameworks.io.specs.propertyList</references>
-    <references>java.util.UUID</references>
     <references>nabu.data.json.Services.marshal</references>
 </node>

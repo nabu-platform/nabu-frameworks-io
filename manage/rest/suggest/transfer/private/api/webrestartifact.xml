@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <restInterface>
     <method>GET</method>
-    <path>/suggest/transferOut</path>
+    <path>/suggest/transfer/{direction}</path>
     <queryParameters>q</queryParameters>
     <role>$user</role>
+    <permissionAction>channel.list</permissionAction>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useGlobalPermissionContext>true</useGlobalPermissionContext>
     <output>nabu.frameworks.io.manage.rest.suggest.suggestionList</output>
     <lenient>true</lenient>
     <webApplicationId>false</webApplicationId>

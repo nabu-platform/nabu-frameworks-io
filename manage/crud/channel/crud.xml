@@ -4,7 +4,9 @@
     <broadcastCreate>false</broadcastCreate>
     <broadcastUpdate>false</broadcastUpdate>
     <coreType>nabu.frameworks.io.database.types.channel</coreType>
+    <createPermission>channel.manage</createPermission>
     <createRole>$user</createRole>
+    <deletePermission>channel.manage</deletePermission>
     <deleteRole>$user</deleteRole>
     <filters>
         <caseInsensitive>false</caseInsensitive>
@@ -26,10 +28,21 @@
         <foreignName>channelProviderId:name</foreignName>
         <localName>channelProvider</localName>
     </foreignFields>
+    <getPermission>channel.list</getPermission>
+    <hooks>false</hooks>
+    <listPermission>channel.list</listPermission>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
+    <restLimitToUser>true</restLimitToUser>
     <updateBlacklistFields>direction</updateBlacklistFields>
+    <updatePermission>channel.manage</updatePermission>
     <updateRole>$user</updateRole>
     <useExplicitLanguage>false</useExplicitLanguage>
+    <useGlobalPermissionContext>true</useGlobalPermissionContext>
     <useLanguage>false</useLanguage>
+    <useListOutputForCreate>false</useListOutputForCreate>
+    <useListOutputForUpdate>false</useListOutputForUpdate>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
 </crud>

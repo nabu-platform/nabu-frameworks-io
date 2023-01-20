@@ -70,6 +70,15 @@
 						<from>resulta71c52a346084b42b6c85779f986b4f0/server</from>
 						<to>filter/serverId[0]</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="daa3d711-e03e-4ea1-b41c-e634a6513d80"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>connection</from>
+						<to>connectionId</to>
+					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
@@ -360,6 +369,15 @@
 										<from>0</from>
 										<to>filter/depth[0]</to>
 									</steps>
+									<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+											disabled="false"
+											id="5671bc08-194a-48c4-a55c-8d1337adbc97"
+											mask="false"
+											optional="false"
+											fixedValue="false">
+										<from>connection</from>
+										<to>connectionId</to>
+									</steps>
 								</steps>
 							</steps>
 							<steps xsi:type="be.nabu.libs.services.vm.step.Map"
@@ -412,6 +430,15 @@
 											fixedValue="false">
 										<from>channelInstance</from>
 										<to>instances[0]</to>
+									</steps>
+									<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+											disabled="false"
+											id="da8f4b36-7b50-454c-876e-4ff5bbe5fbfe"
+											mask="false"
+											optional="false"
+											fixedValue="false">
+										<from>connection</from>
+										<to>connection</to>
 									</steps>
 								</steps>
 							</steps>
@@ -579,6 +606,15 @@
 											<from>channelInstance</from>
 											<to>instances[0]</to>
 										</steps>
+										<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+												disabled="false"
+												id="90190b32-ccc1-406c-a218-88ac7032e9b5"
+												mask="false"
+												optional="false"
+												fixedValue="false">
+											<from>connection</from>
+											<to>connection</to>
+										</steps>
 									</steps>
 								</steps>
 							</steps>
@@ -626,6 +662,15 @@
 												fixedValue="false">
 											<from>channelInstance</from>
 											<to>instances[0]</to>
+										</steps>
+										<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+												disabled="false"
+												id="1eaed235-11ad-454d-979f-0c0ac72b0bc9"
+												mask="false"
+												optional="false"
+												fixedValue="false">
+											<from>connection</from>
+											<to>connection</to>
 										</steps>
 									</steps>
 								</steps>

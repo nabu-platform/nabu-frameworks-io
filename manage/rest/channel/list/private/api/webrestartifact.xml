@@ -4,6 +4,11 @@
     <path>/channel</path>
     <queryParameters>q</queryParameters>
     <role>$user</role>
+    <permissionAction>channel.list</permissionAction>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useGlobalPermissionContext>true</useGlobalPermissionContext>
     <output>nabu.frameworks.io.manage.rest.channel.channelList</output>
     <lenient>true</lenient>
     <webApplicationId>false</webApplicationId>
