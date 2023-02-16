@@ -106,6 +106,15 @@
 				disabled="false"
 				id="c10ffd3c-fa9f-4485-baf7-d6a3de141819"
 				path="channel/properties" xsi:nil="true"/>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="2428d1fc3c2645b1bc438c0e7786b13e"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/limit</from>
+			<to>channel/limit</to>
+		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
 			disabled="false"

@@ -6,4 +6,5 @@
         <structure definition="nabu.frameworks.io.providers.in.file.fileResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
     </structure>
     <structure definition="be.nabu.libs.resources.api.ResourceProperties" maxOccurs="unbounded" minOccurs="0" name="files"/>
+    <structure definition="nabu.utils.types.UriComponents" minOccurs="0" name="components"/>
 </structure>

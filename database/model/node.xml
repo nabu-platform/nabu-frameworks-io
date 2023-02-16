@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.data.model.DataModelManager" created="2022-02-17T12:56:30.610+01:00" lastModified="2022-03-17T12:07:16.451+01:00" leaf="true" version="69">
+<node artifactManager="be.nabu.eai.module.data.model.DataModelManager" created="2022-02-17T12:56:30.610+01:00" lastModified="2023-01-24T09:55:47.724+01:00" leaf="true" version="71">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
+    <references>nabu.frameworks.io.database.types.channel</references>
+    <references>nabu.frameworks.io.database.types.channelProvider</references>
+    <references>nabu.frameworks.io.database.types.channelTransformer</references>
+    <references>nabu.frameworks.io.database.types.channelInstance</references>
+    <references>nabu.frameworks.io.database.types.channelInstanceData</references>
 </node>

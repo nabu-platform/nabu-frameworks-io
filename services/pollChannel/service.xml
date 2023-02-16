@@ -71,17 +71,32 @@
 			lineNumber="3"
 			code="CHANNEL-NOT-FOUND"
 			message="Channel not found" xsi:nil="true"/>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="d3ee5a43a78c4941a67e66e7a3b8500a"
+			label="input/limit == null"
+			lineNumber="4">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="43d2f32217044873a3991aafe2a0310a"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>channel/limit</from>
+			<to>input/limit</to>
+		</steps>
+	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
 			disabled="false"
 			id="34ebd988-2cb6-46ea-bdfc-ecaeb5204556"
 			label="channel/channelProviderId == null"
-			lineNumber="4"
+			lineNumber="5"
 			code="CHANNEL-NO-PROVIDER"
 			message="Channel does not have a configured provider" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="2aa85fe1-14e1-45b4-9cf7-f74d7d0c8402"
-			lineNumber="5">
+			lineNumber="6">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="0ba2abeb-1628-4ca9-99ff-11aba76b5cf0"
@@ -146,7 +161,7 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="c3bba8c5-71da-42e0-9845-58fe1406e6ee"
-			lineNumber="6">
+			lineNumber="7">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="e90cd74b-3896-4269-8a1f-1429ec88f17a"
@@ -221,7 +236,7 @@
 			comment="Get the transformers for the channel"
 			disabled="false"
 			id="45d94f0f-1489-4df8-b17c-8c5197896c42"
-			lineNumber="7">
+			lineNumber="8">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="28235ce6-c08c-415d-a5a2-95bac000ede0"
@@ -306,7 +321,7 @@
 			disabled="false"
 			id="e9f29ac7-6520-4fe0-98fa-f67341d392e0"
 			label="channel/queue == null"
-			lineNumber="8">
+			lineNumber="9">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
 				id="7de83322-2dc0-4a79-8f70-3e9af57a36d2"
@@ -321,18 +336,28 @@
 			comment="Repeat depending on the limit / limited settings"
 			disabled="false"
 			id="4c1a31f3-e718-4e9b-98c6-1b8f61646cd5"
-			lineNumber="9">
+			lineNumber="10">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="Drop channel instance"
+				disabled="false"
+				id="62dfc1c1904e477ea098e9b6a003d096"
+				lineNumber="11">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
+					disabled="false"
+					id="1a622c6a1aba4fb0bd13178f32e8f391"
+					path="channelInstance" xsi:nil="true"/>
+		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
 				comment="Transfer, commit everything if this is successful"
 				disabled="false"
 				id="5144b795-6430-401c-b6ad-ef139f7dea2c"
-				lineNumber="10"
+				lineNumber="12"
 				scopeDefaultTransaction="true">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Map new channel instance"
 					disabled="false"
 					id="99391d9e-be5d-45ce-b313-95aa24cef1ca"
-					lineNumber="11">
+					lineNumber="13">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="d40b2deb-9235-459d-b9f8-03ae9adf7257"
@@ -443,7 +468,7 @@
 					comment="Insert it immediately for foreign key purposes"
 					disabled="false"
 					id="894b4331-8aac-4360-86fa-54eac2c82da7"
-					lineNumber="12">
+					lineNumber="14">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="4d0d9ff7-0b7f-403a-933b-62c017f4a481"
@@ -479,7 +504,7 @@
 					comment="Get the data"
 					disabled="false"
 					id="6e057ed0-e6be-45b3-87cf-b16dc39b5765"
-					lineNumber="13">
+					lineNumber="15">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="a466761d-6b5e-4d8c-99fb-dd596bd58bb2"
@@ -560,7 +585,7 @@
 					comment="We always store the raw transfer results, even if there are transformers involved"
 					disabled="false"
 					id="7408be5b-0cd6-4e70-b04f-a5abe5ad8928"
-					lineNumber="14"
+					lineNumber="16"
 					variable="transferResult"
 					index="transferIndex"
 					into="transferRecords">
@@ -568,7 +593,7 @@
 						comment="Map main"
 						disabled="false"
 						id="ed625301-ee1c-4611-8e93-2ea96cdc6985"
-						lineNumber="15">
+						lineNumber="17">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="d3de86bb-0bcd-4115-9cb5-33d8192c2d1d"
@@ -741,7 +766,8 @@
 					comment="Insert the raw records"
 					disabled="false"
 					id="9677402b-9b75-4112-a3d5-de4a62608413"
-					lineNumber="16">
+					label="transferRecords"
+					lineNumber="18">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="36a0002a-3748-445e-bd5c-1aa8f7492da7"
@@ -777,7 +803,7 @@
 					comment="Transform the records"
 					disabled="false"
 					id="8082449d-1261-4521-8357-2aa2ee599d57"
-					lineNumber="17">
+					lineNumber="19">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="62ff19bf-0cec-47e3-923d-03701b2baae1"
@@ -840,12 +866,12 @@
 					disabled="false"
 					id="0d8962fb-8423-4d2a-baa5-84a81c00d53e"
 					label="amountOfTransformers &gt; 0"
-					lineNumber="18">
+					lineNumber="20">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						comment="Set the transformed timestamp"
 						disabled="false"
 						id="aa5b8cf0-97b1-4f1a-a3c9-3ddbcdf308bd"
-						lineNumber="19">
+						lineNumber="21">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="d0cf918c-a82a-4a21-bf54-921f2229d686"
@@ -871,7 +897,7 @@
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						disabled="false"
 						id="ec6223cf-a4fa-4e2f-8e21-561e3bb6da80"
-						lineNumber="20">
+						lineNumber="22">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="f3d66e30-ccfc-41a0-b669-15958cef8657"
@@ -910,12 +936,12 @@
 				disabled="false"
 				id="d928abcc-1b4b-4936-9e0a-29a58c7608bc"
 				label="channelProvider/finalizationServiceId != null"
-				lineNumber="21"
+				lineNumber="23"
 				scopeDefaultTransaction="true">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					disabled="false"
 					id="a10449f6-6663-4061-9f48-e311a45530a8"
-					lineNumber="22">
+					lineNumber="24">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="73f62408-a383-4191-8f28-48e8e7531fb3"
@@ -969,7 +995,7 @@
 					comment="Set the finalized timestamp"
 					disabled="false"
 					id="5ba00304c35043189db3ded8aed37ee6"
-					lineNumber="23">
+					lineNumber="25">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="023faf9a92c44db4ae666e3a9a4ab72b"
@@ -995,7 +1021,7 @@
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					disabled="false"
 					id="2ee226d7605041d89fc980245206393d"
-					lineNumber="24">
+					lineNumber="26">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="a1557d6938ec40809bbb9a5394bfdea9"
@@ -1031,18 +1057,18 @@
 		<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
 				disabled="false"
 				id="d90ddad1-1886-4c0e-a847-434063c918ea"
-				lineNumber="25">
+				lineNumber="27">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
 					comment="If we have a handler, process it"
 					disabled="false"
 					id="26c558a9-e949-403a-bb9a-a6dc23731f3a"
 					label="channel/handlerId != null"
-					lineNumber="26"
+					lineNumber="28"
 					scopeDefaultTransaction="true">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						disabled="false"
 						id="61991890-d441-4a6e-b1fb-b15687d92f99"
-						lineNumber="27">
+						lineNumber="29">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="5531badf-0f05-45ce-8d3f-d62aab6080b8"
@@ -1096,7 +1122,7 @@
 						comment="Set the processed timestamp"
 						disabled="false"
 						id="2ec3f74685ed4105b2ad124a1ee61501"
-						lineNumber="28">
+						lineNumber="30">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="8ab23d18a1ad4146a27cad1e80dc132c"
@@ -1131,7 +1157,7 @@
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						disabled="false"
 						id="0717ced57edf47c28dbbfe983f822e79"
-						lineNumber="29">
+						lineNumber="31">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="a334fc3a0c974ed49f97dc10499b1366"
@@ -1168,13 +1194,13 @@
 					comment="Just set done"
 					disabled="false"
 					id="a27d27dafb814ddab88938ffaa3cc27e"
-					lineNumber="30"
+					lineNumber="32"
 					scopeDefaultTransaction="true">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						comment="Set done"
 						disabled="false"
 						id="7b9169150f0546a29711b6979e791cf8"
-						lineNumber="31">
+						lineNumber="33">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
 							id="d69aabe4ffb14d41957e94c3d4e2cabd"
@@ -1188,7 +1214,7 @@
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						disabled="false"
 						id="b790b98c17ff415e997b7c1609a2ba7e"
-						lineNumber="32">
+						lineNumber="34">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="aa4b384132a64b2fa6f90e633ac89c26"
@@ -1227,7 +1253,7 @@
 				disabled="false"
 				id="ec60b531-023a-49ad-a518-57e78c9f7bf4"
 				label="input/limit != null"
-				lineNumber="33">
+				lineNumber="35">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
 					id="d83a8959-a50f-4ff8-9303-40c3d377b127"
@@ -1237,13 +1263,17 @@
 				<from>= offset + input/limit</from>
 				<to>offset</to>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
+					disabled="false"
+					id="43628517b7d24a6ea9b9321b5db3fa21"
+					path="transferRecords" xsi:nil="true"/>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Break"
 				comment="If there is no limit configured or it was not adhered to, stop looping"
 				disabled="false"
 				id="4afcd6dc-380d-411a-b37d-35123578c87f"
 				label="input/limit == null || !limited"
-				lineNumber="34">
+				lineNumber="36">
 			<count>1</count>
 		</steps>
 		<query>looping</query>

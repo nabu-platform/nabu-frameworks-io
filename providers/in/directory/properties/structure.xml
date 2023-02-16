@@ -4,4 +4,6 @@
     <field minOccurs="0" name="recursive" type="java.lang.Boolean"/>
     <field minOccurs="0" name="deleteOriginal" type="java.lang.Boolean"/>
     <field comment="The extension a processed file should get" minOccurs="0" name="processedExtension" type="java.lang.String"/>
+    <field minOccurs="0" name="fileGroupRegex" type="java.lang.String"/>
+    <field minOccurs="0" name="expectedGroupSize" type="java.lang.Long"/>
 </structure>

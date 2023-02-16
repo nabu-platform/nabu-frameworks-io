@@ -70,6 +70,15 @@
 			<from>input/content/context</from>
 			<to>channel/context</to>
 		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="a90cceb55d314e8588e8631d3d59d0d8"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/limit</from>
+			<to>channel/limit</to>
+		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
 			disabled="false"

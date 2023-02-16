@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2018-07-03T15:43:17.834+02:00" lastModified="2022-03-17T12:21:55.142+01:00" leaf="true" version="12">
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2018-07-03T15:43:17.834+02:00" lastModified="2023-01-23T20:08:30.383+01:00" leaf="true" version="13">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
     <references>java.net.URI</references>
     <references>java.lang.String</references>
     <references>java.lang.Boolean</references>
+    <references>java.lang.Long</references>
 </node>

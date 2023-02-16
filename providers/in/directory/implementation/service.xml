@@ -66,6 +66,33 @@
 				<from>input/properties/fileRegex</from>
 				<to>fileFilter</to>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="ba878336c49b4167b7580d28aee357d7"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/limit</from>
+				<to>limit</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="3aa7253c1e6147cda395c6d91cb8269d"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/fileGroupRegex</from>
+				<to>groupRegex</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="d48753f0cb734d3b81195763282ac67b"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/expectedGroupSize</from>
+				<to>expectedGroupSize</to>
+			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
@@ -75,6 +102,36 @@
 				fixedValue="false">
 			<from>result02f682d8c2284b6782513d250ca14805/children</from>
 			<to>files</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="dae7685bf4b542a89ea954702f2878ff"
+				serviceId="nabu.utils.Uri.toComponents"
+				resultName="result111ee22e3f3f4c8f9aa331ef28959779"
+				temporaryMapping="true"
+				x="122"
+				y="333"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="b833153fa6b347a1bda61903c62bc558"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/uri</from>
+				<to>uri</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="229fd397356342989c36ebeca10a7ca9"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result111ee22e3f3f4c8f9aa331ef28959779/components</from>
+			<to>components</to>
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.For"
@@ -120,7 +177,7 @@
 			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
-				disabled="false"
+				disabled="true"
 				id="f2683655-2c5a-4959-bd59-1ae71f8e27ee"
 				label="input/limit != null &amp;&amp; index &gt;= input/limit - 1"
 				lineNumber="7">
@@ -147,5 +204,20 @@
 			</steps>
 		</steps>
 		<query>files</query>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Set output limited if we have imposed a limit and have _any_ output. Because of grouping we don't know if we actually hit the limit"
+			disabled="false"
+			id="b1443aa83ca14f16b4c9e620511da71f"
+			lineNumber="10">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="8a56c5c05261448681655f706b168023"
+				mask="false"
+				optional="false"
+				fixedValue="true">
+			<from>=input/limit != null &amp;&amp; output/results != null</from>
+			<to>output/limited</to>
+		</steps>
 	</steps>
 </sequence>
