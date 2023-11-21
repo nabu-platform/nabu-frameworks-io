@@ -12,4 +12,7 @@
     <webFragments>nabu.frameworks.io.manage.rest.channelProvider.listProperties</webFragments>
     <webFragments>nabu.frameworks.io.manage.rest.channel.list</webFragments>
     <webFragments>nabu.frameworks.io.manage.rest.suggest.transfer</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.suggest.handler</webFragments>
+    <webFragments>nabu.frameworks.io.manage.rest.channel.poll</webFragments>
+    <audience>MANAGER</audience>
 </webModule>

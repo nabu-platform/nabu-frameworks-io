@@ -1,0 +1,40 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="ef6aca93c060437bbeb357649b2c8652"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="319348e717b14fdca7e560a0d461bd44"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="36b885a3efe24c9c8e9903d3ccee054e"
+				serviceId="nabu.frameworks.io.services.pollChannel"
+				resultName="resultcd66e27400f94898ad2ccff7cbae8a22"
+				temporaryMapping="true"
+				x="104"
+				y="96"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="450c79f8884e473280e5a6cb5968ce8c"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/channelId</from>
+				<to>channelId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="7e55ac9ff16245d199fc763202d2e497"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/limit</from>
+				<to>limit</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

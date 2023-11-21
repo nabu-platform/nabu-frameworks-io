@@ -165,6 +165,15 @@
 					<from>file/uri</from>
 					<to>properties/uri</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="d021fbdfac2048999a32b2f8d19cf765"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/context</from>
+					<to>context</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"

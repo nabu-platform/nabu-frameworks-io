@@ -94,7 +94,7 @@
 				optional="false"
 				fixedValue="false">
 			<from>result377c5e81c32540f98e21265b13ff0c9f/results[context  == /input/context || context ~ "^" + /input/context + "\..*"]</from>
-			<to>channels[0]</to>
+			<to>channels</to>
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.For"

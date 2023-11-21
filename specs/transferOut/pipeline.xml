@@ -1,10 +1,8 @@
 <structure name="pipeline">
     <structure name="input">
         <structure definition="java.lang.Object" minOccurs="0" name="properties"/>
-        <field maxOccurs="unbounded" minOccurs="0" name="uris" type="java.net.URI"/>
+        <structure definition="nabu.frameworks.io.specs.handleInput" maxOccurs="unbounded" name="data" restrict="depth, final"/>
         <field minOccurs="0" name="context" type="java.lang.String"/>
     </structure>
-    <structure name="output">
-        <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
-    </structure>
+    <structure name="output"/>
 </structure>

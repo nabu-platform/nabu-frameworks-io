@@ -51,12 +51,12 @@
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="1446425e-2426-4482-9042-ed8f3733e098"
+						id="3b1e20290519422a9b0bc5ae86301311"
 						mask="false"
 						optional="false"
 						fixedValue="false">
-					<from>input/results</from>
-					<to>results</to>
+					<from>result</from>
+					<to>results[0]</to>
 				</steps>
 			</steps>
 		</steps>

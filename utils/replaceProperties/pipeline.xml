@@ -1,0 +1,11 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="value" type="java.lang.String"/>
+        <field minOccurs="0" name="properties" type="java.lang.String"/>
+        <structure definition="nabu.utils.types.Property" maxOccurs="unbounded" minOccurs="0" name="additional"/>
+    </structure>
+    <structure name="output">
+        <field name="value" type="java.lang.String"/>
+    </structure>
+    <structure definition="nabu.frameworks.io.specs.propertyList" name="properties"/>
+</structure>

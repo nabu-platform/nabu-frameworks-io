@@ -1,0 +1,17 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field comment="The database connection to use" minOccurs="0" name="connectionId" type="java.lang.String"/>
+        <field name="channelId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" name="data"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" name="channel"/>
+    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" name="provider"/>
+    <structure definition="java.lang.Object" minOccurs="0" name="propertiesInput"/>
+    <field minOccurs="0" name="channelProperties" type="java.lang.String"/>
+    <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="transferRecords"/>
+    <structure collectionName="channelInstances" definition="nabu.frameworks.io.database.types.channelInstance" name="channelInstance"/>
+    <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="recordsToProcess"/>
+    <field minOccurs="0" name="amountOfTransformers" type="java.lang.Integer"/>
+    <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" maxOccurs="unbounded" minOccurs="0" name="transformers"/>
+</structure>

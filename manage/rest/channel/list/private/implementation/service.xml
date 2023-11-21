@@ -137,6 +137,15 @@
 				<from>channel/channelProvider</from>
 				<to>output/content/channels[0]/channelProvider</to>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="f07d28cabbae4b07bf433207e21cf251"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>channel/defaultLimit</from>
+				<to>output/content/channels[0]/defaultLimit</to>
+			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
 				disabled="false"

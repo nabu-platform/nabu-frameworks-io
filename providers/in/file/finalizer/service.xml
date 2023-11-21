@@ -29,11 +29,11 @@
 						recache="false">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
-							id="49a2fa1d-32a0-4770-8ce3-27b1cf287f0c"
+							id="91ce8396616f43f8bcd2ffb9667d9f81"
 							mask="false"
 							optional="false"
 							fixedValue="false">
-						<from>input/properties/uri</from>
+						<from>result/originalUri</from>
 						<to>uri</to>
 					</steps>
 				</steps>

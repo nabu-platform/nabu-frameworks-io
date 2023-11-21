@@ -108,12 +108,12 @@
 				path="channel/properties" xsi:nil="true"/>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
-				id="2428d1fc3c2645b1bc438c0e7786b13e"
+				id="0c238a34edc74c7aa7a15a3ae15cec58"
 				mask="false"
 				optional="false"
 				fixedValue="false">
-			<from>input/content/limit</from>
-			<to>channel/limit</to>
+			<from>input/content/defaultLimit</from>
+			<to>channel/defaultLimit</to>
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"

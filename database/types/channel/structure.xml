@@ -8,5 +8,5 @@
     <field comment="IN or OUT, the channel provider (if configured) must have the same direction" name="direction" type="java.lang.String"/>
     <field minOccurs="0" name="queue" type="java.lang.String"/>
     <field comment="The context this channel is executed in. This can impact datastore routing for example." minOccurs="0" name="context" type="java.lang.String"/>
-    <field comment="You can configure a hard limit on a channel so it never picks up more than this" minOccurs="0" name="limit" type="java.lang.Long"/>
+    <field comment="Set a default limit on this channel if none is provided at runtime" minOccurs="0" name="defaultLimit" type="java.lang.Long"/>
 </structure>
