@@ -5,13 +5,13 @@
         <structure definition="nabu.frameworks.io.specs.transferResult" maxOccurs="unbounded" name="data"/>
     </structure>
     <structure name="output"/>
-    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" name="channel"/>
-    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" name="provider"/>
+    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" enricher="nabu.frameworks.io.crud.channel.services.list" name="channel" persister="nabu.frameworks.io.crud.channel.batch.updateAll"/>
+    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" enricher="nabu.frameworks.io.crud.channelProvider.services.list" name="provider" persister="nabu.frameworks.io.crud.channelProvider.batch.updateAll"/>
     <structure definition="java.lang.Object" minOccurs="0" name="propertiesInput"/>
     <field minOccurs="0" name="channelProperties" type="java.lang.String"/>
     <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="transferRecords"/>
     <structure collectionName="channelInstances" definition="nabu.frameworks.io.database.types.channelInstance" name="channelInstance"/>
     <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="recordsToProcess"/>
     <field minOccurs="0" name="amountOfTransformers" type="java.lang.Integer"/>
-    <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" maxOccurs="unbounded" minOccurs="0" name="transformers"/>
+    <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" enricher="nabu.frameworks.io.crud.channelTransformer.services.list" maxOccurs="unbounded" minOccurs="0" name="transformers" persister="nabu.frameworks.io.crud.channelTransformer.batch.updateAll"/>
 </structure>

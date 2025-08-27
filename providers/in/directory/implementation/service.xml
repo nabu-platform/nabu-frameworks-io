@@ -7,7 +7,8 @@
 			id="44f9fe09-6ee9-4f98-ae74-d08693cf5c85"
 			label="input/properties/uri == null"
 			lineNumber="2"
-			message="No directory configured to pick up files from" xsi:nil="true"/>
+			message="No directory configured to pick up files from"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="All files"
 			disabled="false"

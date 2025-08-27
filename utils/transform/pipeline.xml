@@ -4,7 +4,7 @@
         <field minOccurs="0" name="transactionId" type="java.lang.String"/>
         <field name="channelInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
         <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="records"/>
-        <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" maxOccurs="unbounded" minOccurs="0" name="transformers"/>
+        <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" enricher="nabu.frameworks.io.crud.channelTransformer.services.list" maxOccurs="unbounded" minOccurs="0" name="transformers" persister="nabu.frameworks.io.crud.channelTransformer.batch.updateAll"/>
     </structure>
     <structure name="output">
         <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="transformed"/>

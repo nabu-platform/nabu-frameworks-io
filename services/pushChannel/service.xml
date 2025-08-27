@@ -42,13 +42,15 @@
 			id="06f11099a79b489ba087e14af9176b4d"
 			label="!channel"
 			lineNumber="3"
-			message="Channel not found" xsi:nil="true"/>
+			message="Channel not found"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
 			disabled="false"
 			id="c266c61619154f6f90f7c7a6bda3ab88"
 			label="channel/channelProviderId == null"
 			lineNumber="4"
-			message="Channel provider not found" xsi:nil="true"/>
+			message="Channel provider not found"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="e77261d0a14648669cff9fec232f067a"
@@ -89,7 +91,8 @@
 			id="3f8ba54569dd4d24905a43044a22bf1e"
 			label="provider/transferServiceId == null"
 			lineNumber="6"
-			message="Provider transfer service not found" xsi:nil="true"/>
+			message="Provider transfer service not found"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Get the transformers for the channel"
 			disabled="false"
@@ -1024,6 +1027,7 @@
 				disabled="false"
 				id="940517da4b0544f19e06e1b6c53b058c"
 				lineNumber="31"
-				message="Currently we only support pushing to outbound channels" xsi:nil="true"/>
+				message="Currently we only support pushing to outbound channels"
+				whitelist="false" xsi:nil="true"/>
 	</steps>
 </sequence>

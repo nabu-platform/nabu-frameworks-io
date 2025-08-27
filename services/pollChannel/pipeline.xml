@@ -5,8 +5,8 @@
         <field minOccurs="0" name="limit" type="java.lang.Long"/>
     </structure>
     <structure name="output"/>
-    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" name="channel"/>
-    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" name="channelProvider"/>
+    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" enricher="nabu.frameworks.io.crud.channel.services.list" name="channel" persister="nabu.frameworks.io.crud.channel.batch.updateAll"/>
+    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" enricher="nabu.frameworks.io.crud.channelProvider.services.list" name="channelProvider" persister="nabu.frameworks.io.crud.channelProvider.batch.updateAll"/>
     <structure definition="java.lang.Object" name="propertiesInput"/>
     <field minOccurs="0" name="limited" type="java.lang.Boolean"/>
     <field name="looping" type="java.lang.Boolean"/>
@@ -17,7 +17,7 @@
     <structure collectionName="channelTransfers" definition="nabu.frameworks.io.database.types.channelInstanceData" maxOccurs="unbounded" minOccurs="0" name="recordsToProcess"/>
     <structure collectionName="channelInstances" definition="nabu.frameworks.io.database.types.channelInstance" name="channelInstance"/>
     <field minOccurs="0" name="amountOfTransformers" type="java.lang.Integer"/>
-    <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" maxOccurs="unbounded" minOccurs="0" name="transformers"/>
+    <structure collectionName="channelTransformers" definition="nabu.frameworks.io.crud.channelTransformer.types.output" enricher="nabu.frameworks.io.crud.channelTransformer.services.list" maxOccurs="unbounded" minOccurs="0" name="transformers" persister="nabu.frameworks.io.crud.channelTransformer.batch.updateAll"/>
     <field minOccurs="0" name="channelProperties" type="java.lang.String"/>
     <structure definition="java.lang.Object" maxOccurs="unbounded" name="transferResults"/>
 </structure>

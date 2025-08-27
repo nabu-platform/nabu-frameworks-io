@@ -42,7 +42,8 @@
 			id="b9246a97-3cbe-4d04-944b-9ac211a824fc"
 			label="!provider"
 			lineNumber="3"
-			code="404" xsi:nil="true"/>
+			code="404"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="c850b982-2d55-4464-9d60-f34a1749d6af"

@@ -42,7 +42,8 @@
 			id="1674b0bb-7bf1-4986-b698-eab0c4e97483"
 			label="!channel"
 			lineNumber="3"
-			code="404" xsi:nil="true"/>
+			code="404"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Map main"
 			disabled="false"

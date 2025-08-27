@@ -2,6 +2,6 @@
     <structure name="input"/>
     <structure name="output"/>
     <structure definition="nabu.utils.types.ParameterDescription" maxOccurs="unbounded" minOccurs="0" name="parameters"/>
-    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" name="provider"/>
+    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" enricher="nabu.frameworks.io.crud.channelProvider.services.list" name="provider" persister="nabu.frameworks.io.crud.channelProvider.batch.updateAll"/>
     <structure definition="nabu.utils.types.ParameterDescription" minOccurs="0" name="propertyParameter"/>
 </structure>

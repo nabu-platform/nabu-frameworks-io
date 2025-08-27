@@ -1,6 +1,6 @@
 <structure interface="nabu.frameworks.io.manage.rest.channel.list:api" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
-    <structure collectionName="channels" definition="nabu.frameworks.io.manage.crud.channel.types.output" maxOccurs="unbounded" minOccurs="0" name="channels"/>
+    <structure collectionName="channels" definition="nabu.frameworks.io.manage.crud.channel.types.output" enricher="nabu.frameworks.io.manage.crud.channel.services.list" maxOccurs="unbounded" minOccurs="0" name="channels" persister="nabu.frameworks.io.manage.crud.channel.batch.updateAll"/>
     <structure definition="nabu.frameworks.io.specs.propertyList" name="propertyList"/>
 </structure>

@@ -1,8 +1,8 @@
 <structure name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
-    <structure collectionName="channelInstances" definition="nabu.frameworks.io.crud.channelInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="channelInstances"/>
-    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" name="channel"/>
+    <structure collectionName="channelInstances" definition="nabu.frameworks.io.crud.channelInstance.types.output" enricher="nabu.frameworks.io.crud.channelInstance.services.list" maxOccurs="unbounded" minOccurs="0" name="channelInstances" persister="nabu.frameworks.io.crud.channelInstance.batch.updateAll"/>
+    <structure collectionName="channels" definition="nabu.frameworks.io.crud.channel.types.output" enricher="nabu.frameworks.io.crud.channel.services.list" name="channel" persister="nabu.frameworks.io.crud.channel.batch.updateAll"/>
     <field maxOccurs="unbounded" minOccurs="0" name="connections" type="java.lang.String"/>
-    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" name="channelProvider"/>
+    <structure collectionName="channelProviders" definition="nabu.frameworks.io.crud.channelProvider.types.output" enricher="nabu.frameworks.io.crud.channelProvider.services.list" name="channelProvider" persister="nabu.frameworks.io.crud.channelProvider.batch.updateAll"/>
 </structure>

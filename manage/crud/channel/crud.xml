@@ -37,6 +37,7 @@
     <updateBlacklistFields>direction</updateBlacklistFields>
     <updatePermission>channel.manage</updatePermission>
     <updateRole>$user</updateRole>
+    <useAsAuthorizationServiceContext>false</useAsAuthorizationServiceContext>
     <useExplicitLanguage>false</useExplicitLanguage>
     <useGlobalPermissionContext>true</useGlobalPermissionContext>
     <useLanguage>false</useLanguage>

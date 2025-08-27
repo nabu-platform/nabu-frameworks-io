@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.iface.ServiceInterfaceManager" created="2022-03-15T12:07:45.069+01:00" lastModified="2022-03-17T11:27:04.137+01:00" leaf="true" version="19">
-    <environmentId>apollo</environmentId>
+<node artifactManager="be.nabu.eai.module.services.iface.ServiceInterfaceManager" created="2022-03-15T12:07:45.069+01:00" lastModified="2025-08-26T12:22:01.003+02:00" leaf="true" version="20">
+    <environmentId>ares</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
     <references>java.lang.Object</references>
     <references>java.lang.Long</references>

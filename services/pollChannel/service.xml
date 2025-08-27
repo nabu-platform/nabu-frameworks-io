@@ -70,7 +70,8 @@
 			label="!channel"
 			lineNumber="3"
 			code="CHANNEL-NOT-FOUND"
-			message="Channel not found" xsi:nil="true"/>
+			message="Channel not found"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="d3ee5a43a78c4941a67e66e7a3b8500a"
@@ -92,7 +93,8 @@
 			label="channel/channelProviderId == null"
 			lineNumber="5"
 			code="CHANNEL-NO-PROVIDER"
-			message="Channel does not have a configured provider" xsi:nil="true"/>
+			message="Channel does not have a configured provider"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="2aa85fe1-14e1-45b4-9cf7-f74d7d0c8402"

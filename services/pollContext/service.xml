@@ -43,7 +43,8 @@
 			id="c2d591dc-6822-4d0f-900e-7344ef904061"
 			label="connectionId == null"
 			lineNumber="3"
-			message="No connection found for context" xsi:nil="true"/>
+			message="No connection found for context"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="cddc90ca-5811-4762-b2ce-c645f797abbb"

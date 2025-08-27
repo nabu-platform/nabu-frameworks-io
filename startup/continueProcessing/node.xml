@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-03-16T16:32:39.088+01:00" lastModified="2022-03-25T09:01:58.973+01:00" leaf="true" version="33">
-    <environmentId>apollo</environmentId>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-03-16T16:32:39.088+01:00" lastModified="2025-08-26T12:22:01.017+02:00" leaf="true" version="34">
+    <environmentId>ares</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
     <references>nabu.frameworks.io.startup.getSupportedConnections</references>
     <references>nabu.utils.Date.now</references>

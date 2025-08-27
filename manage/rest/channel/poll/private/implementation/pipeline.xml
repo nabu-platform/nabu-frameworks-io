@@ -1,4 +1,4 @@
-<structure interface="$self:api" name="pipeline">
+<structure interface="nabu.frameworks.io.manage.rest.channel.poll:api" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
 </structure>
