@@ -1,5 +1,6 @@
 <structure name="pipeline">
     <structure name="input">
+        <field comment="The connection id where the channel is defined" minOccurs="0" name="connectionId" type="java.lang.String"/>
         <structure definition="nabu.frameworks.io.specs.handleInput" maxOccurs="unbounded" minOccurs="0" name="transfers" restrict="final, parentId, taskId"/>
     </structure>
     <structure name="output"/>

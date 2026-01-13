@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.iface.ServiceInterfaceManager" created="2022-03-16T07:55:52.299+01:00" lastModified="2025-08-26T12:22:01.001+02:00" leaf="true" version="5">
+<node artifactManager="be.nabu.eai.module.services.iface.ServiceInterfaceManager" created="2022-03-16T07:55:52.299+01:00" lastModified="2025-12-01T14:47:18.151+01:00" leaf="true" version="6">
     <environmentId>ares</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
+    <references>java.lang.String</references>
     <references>nabu.frameworks.io.specs.handleInput</references>
 </node>
